@@ -18,8 +18,6 @@
 // Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 
 
-
-
 pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     let l1: i32 = nums1.len() as i32;
     let l2: i32 = nums2.len() as i32;
