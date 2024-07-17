@@ -45,16 +45,13 @@ fn main(){
 }
 
 fn calculate_unit_price(used_units: i32) -> f32 {
-    if used_units <= 0 { 
-        return 0.0; 
-    } else if used_units <= 100 { 
-        return (used_units*2) as f32; 
-    } else if used_units <= 200 { 
-        return 100.0*2.0+((used_units-100) as f32)*2.5; 
-    } else if used_units <= 300 { 
-        return 100.0*4.5+((used_units-200) as f32)*3.0; 
-    } else { 
-        return 100.0*7.5+((used_units-300) as f32)*4.0; 
+    let used: f32 = (used_units as f32/100.0).ceil();
+    match used {
+        x if x < 1.0 => return 0.0,
+        1.0 => return (used_units*2) as f32,
+        2.0 => return 100.0*2.0+((used_units-100) as f32)*2.5,
+        3.0 => return 100.0*4.5+((used_units-200) as f32)*3.0,
+        _ => return 100.0*7.5+((used_units-300) as f32)*4.0 
     }
 }
 ```
