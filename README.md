@@ -358,7 +358,7 @@
 
 <details>
   <summary>
-    <h3> 1) Electricity bill calculator (easy) </h3>
+    1) Electricity bill calculator (easy)
   </summary>
 
   ```rust
@@ -413,7 +413,7 @@
 
 <details>
   <summary>
-    <h3> 2) Median of Two Sorted Arrays (hard) </h3>
+    2) Median of Two Sorted Arrays (hard) 
   </summary>
   
   ```rust
@@ -530,7 +530,7 @@
 
 <details>
   <summary>
-    <h3> 3) Longest common prefix (easy) </h3>
+    3) Longest common prefix (easy)
   </summary>
 
   ```rust
