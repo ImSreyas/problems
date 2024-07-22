@@ -32,8 +32,6 @@
 //     s consists of parentheses only '()[]{}'.
 
 
-
-
 var isValid = function(s) {
     let list = [];
     for (char of s.split("")) {
@@ -56,7 +54,6 @@ var isValid = function(s) {
     }
     return list.length === 0;
 };
-
 
 console.log(isValid("(){}[]")); // true
 console.log(isValid("(){}(}")); // false
