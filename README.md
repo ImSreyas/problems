@@ -351,11 +351,6 @@
 
 <h1 align="center"> PROBLEMS </h1>
 
-<div align="center">
-  
-  `rust`
-</div>
-
 <details>
   <summary>
     1) Electricity bill calculator (easy)
@@ -601,5 +596,118 @@
       // let str: String = longest_common_prefix(vec!["flower".to_string(), "flower".to_string()]);
       println!("longest common prefix is : {}", str);
   }
+  ```
+</details>
+
+<details>
+  <summary> 4) Valid parentheses </summary>
+
+  ```javascript
+  // Valid Parentheses (Leetcode - Q.20)
+  // Level : easy 
+  //
+  // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+  
+  // An input string is valid if:
+  
+  //     Open brackets must be closed by the same type of brackets.
+  //     Open brackets must be closed in the correct order.
+  //     Every close bracket has a corresponding open bracket of the same type.
+   
+  
+  // Example 1:
+  
+  // Input: s = "()"
+  // Output: true
+  
+  // Example 2:
+  
+  // Input: s = "()[]{}"
+  // Output: true
+  
+  // Example 3:
+  
+  // Input: s = "(]"
+  // Output: false
+   
+  
+  // Constraints:
+  
+  //     1 <= s.length <= 104
+  //     s consists of parentheses only '()[]{}'.
+
+
+  var isValid = function(s) {
+      let list = [];
+      for (char of s.split("")) {
+          if ("({[".includes(char)) {
+              list.push(char);
+          } else {
+              let cha;
+              switch (char) {
+                  case ")": cha = "(";
+                  break;
+                  case "}": cha = "{";
+                  break;
+                  case "]": cha = "[";
+                  break;
+              }
+              if (list.pop() != cha) {
+                  return false;
+              }
+          }
+      }
+      return list.length === 0;
+  };
+  
+  console.log(isValid("(){}[]")); // true
+  console.log(isValid("(){}(}")); // false
+  console.log(isValid("({})")); // true
+  console.log(isValid("({[]})")); // true
+  console.log(isValid("({]})")); // false
+  console.log(isValid("(")); // false
+  ```
+</details>
+
+<details>
+  <summary> 5) String transform </summary>
+
+  ```javascript
+  // String pattern transform 
+  // Level : easy
+  //
+  // The input will be a string, the output should be a string transformed as given below : 
+  //
+  // '*' should be removed.
+  // 0 should be removed.
+  // Every numbers should present in the string should be at the beginning of output string in the reverse order.
+  // Replace any number in the input string with 0 at it's original position. 
+  // If a Upper case then lower case letters found close, swap those characters
+  
+  let string = "Sre*125*00hij*ab" // output : 521rS*e000hijab
+  
+  let result = "";
+  let flag = false;
+  
+  for (char of string.split("")) {
+      if (char == 0 || char == "*") continue;
+      if (parseInt(char)) {
+          result = char + result;
+          result = result + "0";
+      } else {
+          if (char.toUpperCase() == char) {
+              result += char;
+              flag = true;
+          } else {
+              if (flag) {
+                  result = result.slice(0, result.length - 1) + char + result.charAt(result.length - 1) + "*";
+                  flag = false;
+              } else {
+                      result += char;
+              }
+          }
+      }
+  }                                                                                                          
+  console.log(result);
   ```
 </details>
