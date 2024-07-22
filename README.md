@@ -1,5 +1,9 @@
 <h1 align="center"> LEARN </h1>
 
+<h2>
+ Rust 
+</h2>
+
 <details>
   <summary> Vector </summary>  
   
@@ -600,7 +604,7 @@
 </details>
 
 <details>
-  <summary> 4) Valid parentheses </summary>
+  <summary> 4) Valid parentheses (easy) </summary>
 
   ```javascript
   // Valid Parentheses (Leetcode - Q.20)
@@ -670,7 +674,7 @@
 </details>
 
 <details>
-  <summary> 5) String transform </summary>
+  <summary> 5) String transform (easy) </summary>
 
   ```javascript
   // String pattern transform 
