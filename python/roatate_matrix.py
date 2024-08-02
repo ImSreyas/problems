@@ -15,7 +15,21 @@ c = int(input("Enter the no.of cols : "))
 
 matrix = read_matrix(r, c)
 
-for i in range(0, c):
-    for j in range(r-1, -1, -1):
-        print(matrix[j][i], end=" ")
-    print()
+# clock wise rotation 
+# for i in range(0, c):
+#     for j in range(r-1, -1, -1):
+#         print(matrix[j][i], end=" ")
+#     print()
+
+# anti-clock wise rotation 
+# for i in range(c-1, -1, -1):
+#     for j in range(r):
+#         print(matrix[j][i], end=" ")
+#     print()
+
+# 180 deg rotation
+# for i in range(r-1, -1, -1):
+#     for j in range(c):
+#         print(matrix[i][j])
+        
+
