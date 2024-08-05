@@ -43,21 +43,24 @@ def seq_len(seq):
     if len(seq) == 1: 
         return 1
     for (index, value) in enumerate(seq):
+        # print(index, value)
         count = 1
         cur = value
         new_index = index
+        print()
 
         while new_index < len(seq)-1:
             min_index = find_min(seq[new_index+1:], cur) 
+            print(new_index)
             if min_index == -1 : break;
             new_index = min_index+new_index+1
             cur = seq[new_index]
-            count +=1
+            count += 1
 
         if count > max :
             max = count
-            count = 0
+            count = 1
     return max
 
 sub_seq_len = seq_len(seq)
-print(sub_seq_len)
+# print(sub_seq_len)
